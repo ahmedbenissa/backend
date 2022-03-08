@@ -149,7 +149,7 @@ Route.post('/addvotes',async(req,res)=>{
           res.header("Access-Control-Allow-Origin", "http://localhost:3000");
             voteblock.create({
   
-                transactions:[],
+                transactions:req.body.transactions,
                 timestamp:Date.now(),
                 hash:0
                 })
